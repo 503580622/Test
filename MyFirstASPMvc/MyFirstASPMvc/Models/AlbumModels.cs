@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyFirstASPMvc.Models
 {
-	class Album
+	public class Album
 	{
 		public virtual int AlbumId { get; set; }
 		public virtual int GenreId { get; set; }
