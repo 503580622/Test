@@ -49,7 +49,7 @@ namespace MyFirstASPMvc.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,price,AlbumArtUrl")] Album album)
+        public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] Album album)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace MyFirstASPMvc.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AlbumId,GenreId,ArtistId,Title,price,AlbumArtUrl")] Album album)
+        public ActionResult Edit([Bind(Include = "AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] Album album)
         {
             if (ModelState.IsValid)
             {
