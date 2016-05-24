@@ -75,7 +75,18 @@ namespace MyFirstASPMvc.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "name", album.ArtistId);
+			// 未成功
+			List<SelectListItem> items = new List<SelectListItem>();
+			for (int i = 0; i < 5; i++)
+			{
+				SelectListItem item = new SelectListItem();
+				item.Text = "name" + i;
+				item.Selected = false;
+				item.Value = i.ToString();
+			}
+			ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "name", album.ArtistId);
+			
+			
             ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "name", album.GenreId);
             return View(album);
         }
