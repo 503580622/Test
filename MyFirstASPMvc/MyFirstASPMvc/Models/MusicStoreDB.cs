@@ -25,5 +25,7 @@ namespace MyFirstASPMvc.Models
 		public System.Data.Entity.DbSet<Artist> Artists { get; set; }
 
 		public System.Data.Entity.DbSet<Genre> Genres { get; set; }
+
+		public System.Data.Entity.DbSet<MyFirstASPMvc.Models.Order> Orders { get; set; }
 	}
 }
