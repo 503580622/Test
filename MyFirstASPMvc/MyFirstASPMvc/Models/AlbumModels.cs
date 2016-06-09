@@ -15,10 +15,11 @@ namespace MyFirstASPMvc.Models
 		public virtual int GenreId { get; set; }
 		public virtual int ArtistId { get; set; }
 		public virtual string Title { get; set; }
+		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString ="{0:c}")]
 		public virtual decimal Price { get; set; }
 		public virtual string AlbumArtUrl { get; set; }
 		public virtual Genre Genre { get; set; }
-		public virtual Artist Artist  { get; set; }
+		public virtual Artist Artist { get; set; }
 
 		public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
 		{
