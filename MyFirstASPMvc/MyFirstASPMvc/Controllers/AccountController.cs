@@ -55,9 +55,10 @@ namespace MyFirstASPMvc.Controllers
         //
         // GET: /Account/Login
         [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
+        public ActionResult Login(string returnUrl, string userName)
         {
             ViewBag.ReturnUrl = returnUrl;
+            ViewBag.UserName = userName;
             return View();
         }
 

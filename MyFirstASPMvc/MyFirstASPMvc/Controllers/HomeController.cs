@@ -26,5 +26,14 @@ namespace MyFirstASPMvc.Controllers
 
 			return View();
 		}
+        /// <summary>
+        /// 测试AJAX
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public ActionResult Test()
+        {
+            return PartialView("_AJAX");
+        }
 	}
 }

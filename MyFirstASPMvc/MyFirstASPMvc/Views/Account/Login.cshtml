@@ -12,6 +12,7 @@
             {
                 @Html.AntiForgeryToken()
                 <h4>使用本地帐户登录。</h4>
+                <h4 id="welcome-msg"></h4>
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
@@ -60,4 +61,16 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @if (ViewBag.UserName != null)
+    {
+        <script type="text/javascript">
+            $(function () {
+                var msg = "Welcome, @ViewBag.UserName";
+                $("#welcome-msg").html(msg).hide().show('slow');
+            });
+        </script>
+    }
 }
+@section Test {
+    <div>123</div>
+    }
